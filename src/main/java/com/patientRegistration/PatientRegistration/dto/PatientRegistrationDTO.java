@@ -1,6 +1,5 @@
 package com.patientRegistration.PatientRegistration.dto;
 
-import com.patientRegistration.PatientRegistration.model.Address;
 import com.patientRegistration.PatientRegistration.model.NotificationType;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -18,7 +17,16 @@ public record PatientRegistrationDTO(
         String email,
 
         @NotNull
-        Address address,
+        String street,
+
+        @NotNull
+        String city,
+
+        @NotNull
+        String state,
+
+        @NotNull
+        String zipCode,
 
         @NotNull
         @Size(min = 3, max = 15)
@@ -29,6 +37,6 @@ public record PatientRegistrationDTO(
         NotificationType notificationType
 ) {
         public PatientRegistrationDTO() {
-                this(null, null, null, null, null, NotificationType.EMAIL);
+                this(null, null, null, null, null, null, null, null, NotificationType.EMAIL);
         }
 }

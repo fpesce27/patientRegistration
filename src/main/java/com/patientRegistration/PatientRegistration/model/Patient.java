@@ -48,7 +48,7 @@ public class Patient extends AuditableEntity{
         Patient patient = new Patient();
         patient.name = patientDTO.name();
         patient.email = patientDTO.email();
-        patient.address = patientDTO.address();
+        patient.address = new Address(patientDTO.street(), patientDTO.city(), patientDTO.state(), patientDTO.zipCode());
         patient.phoneNumber = patientDTO.phoneNumber();
         return patient;
     }

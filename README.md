@@ -45,6 +45,10 @@
 
 5. The application will be available at `http://localhost:8080`.
 
+## API Documentation
+
+The API documentation is available at `http://localhost:8080/swagger-ui.html`.
+
 ## Design Decisions
 
 - **Patient**:
